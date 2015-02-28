@@ -22,7 +22,9 @@ DROP TABLE IF EXISTS `messages`;
 
 CREATE TABLE `messages` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `message` VARCHAR(200) NULL DEFAULT NULL,
+  `text` VARCHAR(200) NULL DEFAULT NULL,
+  `roomname` VARCHAR(20) NULL DEFAULT NULL,
+  `username` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -31,40 +33,40 @@ CREATE TABLE `messages` (
 --
 -- ---
 
-DROP TABLE IF EXISTS `users`;
+-- DROP TABLE IF EXISTS `users`;
 
-CREATE TABLE `users` (
-  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `user` VARCHAR(10) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
+-- CREATE TABLE `users` (
+--   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+--   `username` VARCHAR(10) NULL DEFAULT NULL,
+--   PRIMARY KEY (`id`)
+-- );
 
 -- ---
 -- Table 'rooms'
 --
 -- ---
 
-DROP TABLE IF EXISTS `rooms`;
+-- DROP TABLE IF EXISTS `rooms`;
 
-CREATE TABLE `rooms` (
-  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `room` VARCHAR(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
+-- CREATE TABLE `rooms` (
+--   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+--   `roomname` VARCHAR(20) NULL DEFAULT NULL,
+--   PRIMARY KEY (`id`)
+-- );
 
 -- ---
 -- Table 'usersrooms'
 --
 -- ---
 
-DROP TABLE IF EXISTS `usersrooms`;
+-- DROP TABLE IF EXISTS `usernameroomname`;
 
-CREATE TABLE `usersrooms` (
-  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `userID` INTEGER(3) NULL DEFAULT NULL,
-  `roomID` INTEGER(3) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
+-- CREATE TABLE `usersrooms` (
+--   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+--   `usernameID` INTEGER(3) NULL DEFAULT NULL,
+--   `roomnameID` INTEGER(3) NULL DEFAULT NULL,
+--   PRIMARY KEY (`id`)
+-- );
 
 -- ---
 -- Foreign Keys
