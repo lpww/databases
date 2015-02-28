@@ -4,6 +4,7 @@
 -- ---
 -- Globals
 -- ---
+DROP DATABASE chat;
 
 CREATE DATABASE chat;
 
@@ -69,10 +70,10 @@ CREATE TABLE `usersrooms` (
 -- Foreign Keys
 -- ---
 
-ALTER TABLE `messages` ADD FOREIGN KEY (id) REFERENCES `users` (`id`);
-ALTER TABLE `messages` ADD FOREIGN KEY (id) REFERENCES `rooms` (`id`);
-ALTER TABLE `usersrooms` ADD FOREIGN KEY (userID) REFERENCES `users` (`id`);
-ALTER TABLE `usersrooms` ADD FOREIGN KEY (roomID) REFERENCES `rooms` (`id`);
+-- ALTER TABLE `messages` ADD FOREIGN KEY (id) REFERENCES `users` (`id`);
+-- ALTER TABLE `messages` ADD FOREIGN KEY (id) REFERENCES `rooms` (`id`);
+-- ALTER TABLE `usersrooms` ADD FOREIGN KEY (userID) REFERENCES `users` (`id`);
+-- ALTER TABLE `usersrooms` ADD FOREIGN KEY (roomID) REFERENCES `rooms` (`id`);
 
 -- ---
 -- Table Properties
