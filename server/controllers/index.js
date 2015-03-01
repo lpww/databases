@@ -9,7 +9,7 @@ module.exports = {
         models.messages.get(function(err, results){
           if (err) console.log(err);
           console.log(results);
-          res.end();
+          res.send(JSON.stringify(results));
         });
     },
     post: function (req, res) {
@@ -17,7 +17,7 @@ module.exports = {
       params = [ req.body.text, req.body.roomname, req.body.username ];
       models.messages.post(params, function(err, results){
         if (err) console.log(err);
-        res.end();
+        res.send();
       });
     }
   },
@@ -27,14 +27,14 @@ module.exports = {
       models.users.get(function(err, results){
         if (err) console.log(err);
         console.log(results);
-        res.end();
+        res.send(JSON.stringify(results));
       });
     },
     post: function (req, res) {
       params = [ req.body.username ];
       models.users.post(params, function(err, results){
         if (err) console.log(err);
-        res.end();
+        res.send();
       });
     }
   }

@@ -4,7 +4,7 @@
 -- ---
 -- Globals
 -- ---
-DROP DATABASE chat;
+-- DROP DATABASE chat;
 
 CREATE DATABASE chat;
 
